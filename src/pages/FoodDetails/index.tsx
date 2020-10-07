@@ -126,15 +126,15 @@ const FoodDetails: React.FC = () => {
     if (isFavorite) {
       api.delete(`/favorites/${food.id}`);
     } else {
-      api.post('favorites', food);
+      api.post(`favorites`, food);
     }
 
     setIsFavorite(!isFavorite);
   }, [isFavorite, food]);
 
   const cartTotal = useMemo(() => {
-    const extraTotal = extras.reduce((acm, extra) => {
-      return acm + extra.quantity * extra.value;
+    const extraTotal = extras.reduce((accumulator, extra) => {
+      return accumulator + extra.quantity * extra.value;
     }, 0);
 
     const foodTotal = food.price;

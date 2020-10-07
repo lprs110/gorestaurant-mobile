@@ -24,7 +24,6 @@ interface Food {
   description: string;
   price: number;
   formattedValue: number;
-  formattedPrice: number;
   thumbnail_url: string;
 }
 

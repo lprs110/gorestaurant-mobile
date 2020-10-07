@@ -57,7 +57,6 @@ const Dashboard: React.FC = () => {
     navigation.navigate('FoodDetails', {
       id,
     });
-    // Navigate do ProductDetails page
   }
 
   useEffect(() => {
